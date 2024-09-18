@@ -51,9 +51,23 @@ test("has title", async ({ request, page, context }) => {
   const frame = page.frameLocator(
     'div[class="video-poster video-width"] youtube-player iframe'
   );
-  if (frame) {
+
+  //If Main Page Opens
+  const frameCount = await frame.getByTitle("Play").isVisible();
+  if (frame && frameCount) {
     await frame.locator(".ytp-large-play-button").click();
   }
+
+
+  //If Captcha Page Opens
+  const isCaptchaPage = await page.locator(".shaareblocckk svg").isVisible();
+  if (isCaptchaPage) {
+    console.log("inflowDAta");
+    setTimeout(async () => {
+      await bigcaptchasolve(page);
+    }, 5000);
+  }
+
   let imagesArrary = ["", "", "", ""];
   let ArrayOfBase64 = ["", "", "", ""];
 
@@ -224,7 +238,10 @@ test("has title", async ({ request, page, context }) => {
 
     //consloing all urls
     if (request.url().match(/^https:\/\/www\.skylom\.com\/.*/)) {
-      console.log(request.url());
+      const date = new Date();
+      const timeZone = 'Asia/Kolkata';
+      const formatter = new Intl.DateTimeFormat('en-US', { timeStyle: 'short', timeZone });
+      console.log(`${request.url()}   ${formatter.format(date)}`);
       lastExecutionTime = Date.now();
     }
 
