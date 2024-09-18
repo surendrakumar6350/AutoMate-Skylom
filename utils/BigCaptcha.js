@@ -24,7 +24,7 @@ async function bigcaptchasolve(page) {
           //choose true and false
           const result = await solveTrue("check this image and answer me in true and false,   remember this you have to answer in true and false,   what is answer true and false",`data:image/png;base64,${base64Image}`)
           console.log(result);
-          const index = find(["true", "false"], result);
+          const index = find(["true", "false"], `${result}`);
           await page.locator(`.shaareblocckk .link-btn-list li:nth-child(${((index) + 1)}) a`).click();
         }
       } catch (error) {
