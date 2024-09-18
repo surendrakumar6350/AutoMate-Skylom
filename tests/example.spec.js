@@ -45,7 +45,7 @@ test("has title", async ({ request, page, context }) => {
   await new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve(true);
-    }, 20000);
+    }, 50000);
   });
 
   const frame = page.frameLocator(
