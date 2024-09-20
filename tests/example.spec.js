@@ -28,14 +28,14 @@ test("has title", async ({ request, page, context }) => {
     {
       name: "cf_clearance",
       value:
-        "_dIYuAkqi6EeJ0bum2c7yuLFeXnCeXNXeBsb4Yzpoqw-1726386032-1.2.1.1-fRGM3BntPX4RvzFLn8vIvYKwfo9qSQji7pisMpWq0.urlmh6FcOVe7fyyEfCVORb.IdYIetVmN64NiSY8jmJ_mQzyEs8eyKwbJRsT63u5qhamrwPLM9uaDSVJ8gIrExEq06HfWxym0BuQXLn9rYDxwcf_2_PaH.gtM98S9Sr3NCv6frRNq4yF1zwoAhiWo9uE196i4PvztyDaEPo9fAJyAPBpehpXHzgjfN1IXkHx_TXb6SgB.j5HEKDkbJ_yact0sN1uKHgvV9CEQRVq5XawHgR9DJPBOMf9DKMRJZ9wpUKzv8k0rMTmD3yWM8tzCPyQbhx4rew39Cz.gcyF7I4pyS2zfonCDACloLcc2YadaUl4IrwCEC1t0K.mAetLi3vv.x5y.IuGlyd3Z2nineJgg",
+        "STSbmUpn1ky_enXp1U3aY2L5FkDZQThX0Y5_Z21wvcU-1726801860-1.2.1.1-3vtvcUu1HEB7LYaZUR_ScL2CAFXAV_POBxL4l0nVELogdcRbpXct_uiNibeSnCU2Y1z.rJvkShHIDlbWL0EXmZpdA22OQylsyc3sqvcmAFhpWzvFWxKQU8pz8usvaxSLZ5dBStOBenCSP7hb_muTVzli8CgsFinngFxqo4aGpJraOWBQiFKdiR1v6kwmIgsM3_dn28pdpyFskOuVv3BL7RLzBtd9NJOk6JKTjrzQ1B8vdsfwja4snxIurWHNxWPkfL8UFyCoirMNaTSNx4Kwc23YZ5nh8v.S7b5SgJqoVFULawuQclPwrjB7YtSUUdXpAf_9ceyWQyZvy0YpEOGkF9zj5nUv_NLK4VUN5pmy4uKhX_aZN5Xbk3pWOM3655CC",
       path: "/",
       domain: ".skylom.com",
     },
     {
       name: "sklioue.seoidd01",
       value:
-        "s%3A8Z0m-EJhvfrsAcl0YFA-q9w43eTP9j86.X9zI5Ux2tKXxGyIz1v8U68kdW2Q6ADwjeXO0tEAGOrM",
+        "s%3A3s_gs4kDKEqEfP2ykXNtZoX1_EzjEIbN.Lles3uIBzK7F91wnU0QC3bJ2pS972mnOw1THY4Etj84",
       path: "/",
       domain: "www.skylom.com",
     },
