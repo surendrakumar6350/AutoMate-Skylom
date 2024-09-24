@@ -140,7 +140,9 @@ test("has title", async ({ request, page, context }) => {
               await page.reload();
             }
             const ans = await fetchChat("what is written in this image, give a very short answer", e);
-            return ans;
+            let newAns = ans.replace("$@$v=undefined-rv1$@$", "");
+            let newAnss = newAns.replace("$@$v=v1.10-rv1$@$", "");
+            return newAnss.trim();
           });
           const allKeywords = await Promise.all(imageContentArray);
           const title = await frame.locator(".ytp-title-link").innerHTML();
