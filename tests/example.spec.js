@@ -28,19 +28,19 @@ test("has title", async ({ request, page, context }) => {
     {
       name: "cf_clearance",
       value:
-        "_dIYuAkqi6EeJ0bum2c7yuLFeXnCeXNXeBsb4Yzpoqw-1726386032-1.2.1.1-fRGM3BntPX4RvzFLn8vIvYKwfo9qSQji7pisMpWq0.urlmh6FcOVe7fyyEfCVORb.IdYIetVmN64NiSY8jmJ_mQzyEs8eyKwbJRsT63u5qhamrwPLM9uaDSVJ8gIrExEq06HfWxym0BuQXLn9rYDxwcf_2_PaH.gtM98S9Sr3NCv6frRNq4yF1zwoAhiWo9uE196i4PvztyDaEPo9fAJyAPBpehpXHzgjfN1IXkHx_TXb6SgB.j5HEKDkbJ_yact0sN1uKHgvV9CEQRVq5XawHgR9DJPBOMf9DKMRJZ9wpUKzv8k0rMTmD3yWM8tzCPyQbhx4rew39Cz.gcyF7I4pyS2zfonCDACloLcc2YadaUl4IrwCEC1t0K.mAetLi3vv.x5y.IuGlyd3Z2nineJgg",
+        "jSKjeyMXbVR_uWlQyuFbIdDPn3WAgw10YI_uB4ZWT9k-1727771882-1.2.1.1-INvx2o4QHrTFKo_jIB7Ma2DeMnyuGtuBA8HNBLXwhfd11dTt11FrPeihiiTIyOdpxPfpnS4xrb6eZ_LFrdXOpiquumorzgLcIjRln7NzSgOR3jqda9HmuzQLoUkk5uSXUhv19yGHVj_8AK_wieB0BczsnYmgis5LCnnd3kebnEnRHcGZ1xIPdLV24s63zEs4Y9sjSH6vqwsweP3ue6bhV8scs8xtw2B5BIY9dCxiKIOU01lRD9OV2XRVW4y3ZhGiL9LD_.MfeOU.WI3IlnYafZV2FI4_iVKwaRIOkwULPJPr_dHuQOeUyGl6iyxnkpJmOK2PMgwdly4fVEllc26.HLI5BKaFkr0pjSsyRGEKw.1RA4hrtMDsV4hc.VSUmslxj7VDBYQ5qcbJY1I6Nu3onA",
       path: "/",
-      domain: ".skylom.com",
+      domain: ".popmack.com",
     },
     {
       name: "sklioue.seoidd01",
       value:
-        "s%3A8Z0m-EJhvfrsAcl0YFA-q9w43eTP9j86.X9zI5Ux2tKXxGyIz1v8U68kdW2Q6ADwjeXO0tEAGOrM",
+        "s%3AM8UnM41zl5mvvSmjllfKWIpJEsbz1R5E.MPo7rqhk7KoR9k56lF9H6GI0vp9PlBvb%2FLHMf27Gxig",
       path: "/",
-      domain: "www.skylom.com",
+      domain: "www.popmack.com",
     },
   ]);
-  await page.goto("https://www.skylom.com/videos");
+  await page.goto("https://www.popmack.com/videos");
 
   await new Promise((resolve, reject) => {
     setTimeout(() => {
@@ -100,7 +100,7 @@ test("has title", async ({ request, page, context }) => {
       }
     }
 
-    if (request.url() === "https://www.skylom.com/videos" || request.url() === "https://www.skylom.com/videos/retention/track") {
+    if (request.url() === "https://www.popmack.com/videos" || request.url() === "https://www.popmack.com/videos/retention/track") {
       let count = 0;
       const intervalId = setInterval(() => {
         clickButton();
@@ -116,7 +116,7 @@ test("has title", async ({ request, page, context }) => {
     for (let i = 0; i < imagesArrary.length; i++) {
       if (imagesArrary[i] == "") continue;
 
-      if (request.url() == `https://www.skylom.com/videos/a/${imagesArrary[i]}`) {
+      if (request.url() == `https://www.popmack.com/videos/a/${imagesArrary[i]}`) {
         const ans = await request.body();
         const buffer = Buffer.from(ans);
         const base64String = buffer.toString('base64');
@@ -124,7 +124,7 @@ test("has title", async ({ request, page, context }) => {
       }
     }
 
-    if (request.url() == "https://www.skylom.com/videos/load") {
+    if (request.url() == "https://www.popmack.com/videos/load") {
       const res = await request.json();
       if (!res?.videoCategories[1]?.img) {
         await page.reload();
@@ -174,7 +174,7 @@ test("has title", async ({ request, page, context }) => {
         console.error("Error clicking button:", error);
       }
     }
-    if (request.url() == "https://www.skylom.com/video/evaluate-option") {
+    if (request.url() == "https://www.popmack.com/video/evaluate-option") {
       let count = 0;
       const intervalId = setInterval(() => {
         clickNextButton();
@@ -188,7 +188,7 @@ test("has title", async ({ request, page, context }) => {
 
 
     // when Redirect happens
-    if (request.url().match(/^https:\/\/www\.skylom\.com\/inflowdata\/.*/)) {
+    if (request.url().match(/^https:\/\/www\.popmack\.com\/inflowdata\/.*/)) {
       console.log("inflowDAta");
       setTimeout(async () => {
         await bigcaptchasolve(page);
@@ -197,7 +197,7 @@ test("has title", async ({ request, page, context }) => {
 
 
     //If big captcha fails try again
-    if (request.url() == "https://www.skylom.com/submitinflowdata") {
+    if (request.url() == "https://www.popmack.com/submitinflowdata") {
       console.log("submitting data")
       try {
         const res = await request.json();
@@ -211,7 +211,7 @@ test("has title", async ({ request, page, context }) => {
 
 
     // Main page Captcha   Small captcha
-    if (request.url() == "https://www.skylom.com/video/dataForIcons") {
+    if (request.url() == "https://www.popmack.com/video/dataForIcons") {
       try {
         const res = await request.json();
         for (let index = 0; index < res.length; index++) {
@@ -231,7 +231,7 @@ test("has title", async ({ request, page, context }) => {
 
     for (let i = 0; i < captchaArray.length; i++) {
       if (captchaArray[i] == "") continue;
-      if (request.url() == `https://www.skylom.com/video/dataForIcons?cid=0&hash=${captchaArray[i]}`) {
+      if (request.url() == `https://www.popmack.com/video/dataForIcons?cid=0&hash=${captchaArray[i]}`) {
         const ans = await request.body();
         captchaPhotos[i] = await findUniquePhotoIndex(ans);
       }
@@ -239,7 +239,7 @@ test("has title", async ({ request, page, context }) => {
 
 
     //consloing all urls
-    if (request.url().match(/^https:\/\/www\.skylom\.com\/.*/)) {
+    if (request.url().match(/^https:\/\/www\.popmack\.com\/.*/)) {
       const date = new Date();
       const timeZone = 'Asia/Kolkata';
       const formatter = new Intl.DateTimeFormat('en-US', { timeStyle: 'short', timeZone });
